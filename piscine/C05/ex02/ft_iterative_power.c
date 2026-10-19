@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_params.c                                    :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 12:55:48 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/09/21 13:01:05 by vcoelho          ###   ########.fr       */
+/*   Created: 2026/09/19 09:27:51 by vcoelho           #+#    #+#             */
+/*   Updated: 2026/09/20 10:18:26 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int	main (int argc, char **argv)
+int ft_iterative_power(int nb, int power)
 {
-	int	i;
-	int	j;
+	int	a;
 
-	i = 1;
-	j = 1;
-	while(argc > 1)
+	if (power < 0)
+		return(0);
+	if (power == 0)
+		return(1);
+	a = 1;
+	while(power > 0)
 	{
-		while(argv[i])
-		{
-			j = 0;
-			while(argv[i][j])
-			{
-				write(1, &argv[i][j], 1);
-				j++;
-			}
-			write(1, "\n", 1);
-			i--;
-		}
+		a = a * nb;
+		power--;
 	}
-	return(0);
+	return(a);
 }
+
+// int	main(int argc, char **argv)
+// {
+// 	if(argc == 3)
+// 	{
+// 		printf("%d\n", ft_iterative_power(atoi(argv[1]), atoi(argv[2])));
+// 	}
+// 	return(0);
+// }
