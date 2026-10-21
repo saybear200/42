@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int isalnum(char *str)
+int ft_isalnum(char *str)
 {
     int i;
     
@@ -15,4 +15,11 @@ int isalnum(char *str)
             return(0);
     }
     return(1);
+}
+
+int main(int argc, char **argv)
+{
+    (void) argc;
+    printf("%d\n", ft_isalnum(argv[1]));
+    return(0);
 }
