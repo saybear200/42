@@ -1,25 +1,11 @@
 #include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-char *ft_tolower(char *str)
+int ft_toupper(int c)
 {
-    int i;
-
-    i = 0;
-    while(str[i])
-    {
-        if(!(str[i] >= 'A' && str[i] <= 'Z'))
-            i++;
-        if(str[i] >= 'A' && str[i] <= 'Z')
-            str[i] = str[i] + 32;
-    }
-    return(str);
-}
-
-int main(int argc, char **argv)
-{
-    (void) argc;
-    printf("%s\n", ft_tolower(argv[1]));
-    return(0);
+        if(c >= 'A' && c <= 'Z')
+            return(c + 32);
+        else
+            return(c);
 }
