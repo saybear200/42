@@ -11,12 +11,22 @@ int ft_strlen(char *s1)
     return(i);
 }
 
-int ft_strlcat(char *dest, char *src)
+int ft_strlcat(char *dest, char *src, size_t size)
 {
     int a;
+    int dest_len;
+    int src_len;
 
-    a = ft_strlen(dest) - ft_strlen(src);
-    return(a);
+    dest_len = ft_strlen(dest);
+    src_len = ft_strlen(src);
+    if(size == 0)
+        return(src_len);
+    if(size < dest_len)
+        return(src_len + size);
+    else
+    {
+        
+    } 
         
 }
 
