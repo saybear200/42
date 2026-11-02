@@ -52,5 +52,7 @@ char	*ft_strchr(const char *str, char chr);
 
 char	*ft_strrchr(const char *str, int c);
 
+void *ft_memset(void *s, int c, size_t n);
+
 // typedef struct s_list;
 #endif
