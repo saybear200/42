@@ -54,5 +54,7 @@ char	*ft_strrchr(const char *str, int c);
 
 void *ft_memset(void *s, int c, size_t n);
 
+char *ft_strtrim(char const *s1, char const *set);
+
 // typedef struct s_list;
 #endif
