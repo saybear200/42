@@ -28,7 +28,7 @@ char	*ft_strnstr(char *ls, char *ss, size_t size);
 
 int	ft_strncmp(char *s1, char *s2, int j);
 
-int	ft_strlen(char *str);
+size_t ft_strlen(const char *str);
 
 int	ft_strlcpy(char *dest, char *src, int i);
 

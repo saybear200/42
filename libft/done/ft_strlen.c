@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int ft_strlen(char *str)
+size_t ft_strlen(const char *str)
 {
 	int	i;
 
@@ -25,10 +25,10 @@ int ft_strlen(char *str)
 	return(i);
 }
 
-// int main(int argc, char **argv)
-// {
-// 	(void) argc;
-// 	printf("%d\n", ft_strlen(argv[1]));
-// 	printf("%ld\n", strlen(argv[1]));
-// 	return(0);
-// }
+/*int main(int argc, char **argv)
+ {
+ 	(void) argc;
+ 	printf("%ld\n", ft_strlen(argv[1]));
+ 	printf("%ld\n", strlen(argv[1]));
+ 	return(0);
+ }*/
