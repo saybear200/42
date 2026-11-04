@@ -16,6 +16,7 @@ char *ft_strtrim(char const *s1, char const *set)
     {
         ft_strrchr(set, ft_strchr(set, s1));
     }
+    str[i] = '\0';
     return(str);
 }
 

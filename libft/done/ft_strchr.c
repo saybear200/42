@@ -19,7 +19,7 @@ char	*ft_strchr(const char *str, char chr)
 	i = 0;
 	while(str[i])
 	{
-		while (str[i] != (char)chr)
+		while (str[i] && str[i] != (char)chr)
 			i++;
 		if (str[i] == (char)chr)
 			return(&((char *)str)[i]);
@@ -27,10 +27,10 @@ char	*ft_strchr(const char *str, char chr)
 	return(NULL);
 }
 
-int main(int argc, char **argv)
-{
-	(void) argc;
-	printf("%s\n", ft_strchr(argv[1], argv[2][0]));
-	printf("%s\n", strchr(argv[1], argv[2][0]));
-	return(0);
-}
+// int main(int argc, char **argv)
+// {
+// 	(void) argc;
+// 	printf("%s\n", ft_strchr(argv[1], argv[2][0]));
+// 	printf("%s\n", strchr(argv[1], argv[2][0]));
+// 	return(0);
+// }

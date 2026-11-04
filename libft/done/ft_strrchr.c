@@ -26,10 +26,10 @@ char	*ft_strrchr(const char *str, int c)
 	return(NULL);
 }
 
-/*int main(int argc, char **argv)
- {
- 	(void) argc;
- 	printf("%s\n", ft_strrchr("Banana", 'n'));
- 	printf("%s\n", strrchr("Banana", 'n'));
- 	return(0);
- } */
+// int main(int argc, char **argv)
+// {
+//  	(void) argc;
+//  	printf("%s\n", ft_strrchr("Banana", 'n'));
+//  	printf("%s\n", strrchr("Banana", 'n'));
+//  	return(0);
+// } 
