@@ -6,13 +6,11 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:37:39 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/10/31 07:45:56 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/07 16:35:02 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int ft_atoi(char *str)
 {

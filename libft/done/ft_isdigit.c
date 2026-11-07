@@ -6,13 +6,11 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:38:29 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/10/31 07:44:33 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/07 16:34:47 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int ft_isdigit(int c)
 {

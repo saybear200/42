@@ -6,13 +6,11 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:50:14 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/10/31 16:53:59 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/07 16:34:03 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 //ls - largestring
 //ss - smallstring

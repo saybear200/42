@@ -1,23 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/07 09:32:32 by vcoelho           #+#    #+#             */
+/*   Updated: 2026/11/07 13:25:03 by vcoelho          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    char *p;
+	char	*str;
+	size_t	i;
 
-    p = s;
-    while (n > 0)
-    {
-        *p = (char)c;
-        p++;
-        n--;
-    }
-    return (s);
+	str = (char *)s;
+	i = 0;
+	while (i < n)
+	{
+		str[i] = (unsigned char)c;
+		i++;
+	}
+	return (s);
 }
 
-// int main()
+// int main(int argc, char **argv)
 // {
-//     char strava[10] = "banana";
-//     ft_memset(strava, 'a', 6);
-//     printf("%s\n", strava);
-//     return(0);
+// 	(void) argc;
+// 	char *strava = argv[1];
+// 	int character = argv[2][0];
+// 	size_t bnbr = (size_t)atoi(argv[3]);
+// 	ft_memset(strava, character, bnbr);
+// 	printf("%s\n", strava);
+// 	return(0);
 // }

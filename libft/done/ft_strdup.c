@@ -6,13 +6,11 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:39:19 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/10/31 07:39:21 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/07 16:34:24 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strdup(char *src)
 {

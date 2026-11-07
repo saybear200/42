@@ -6,14 +6,11 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:39:48 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/10/31 07:46:52 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/07 16:34:16 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int ft_strlcpy(char *dest, char *src, int i)
 {
