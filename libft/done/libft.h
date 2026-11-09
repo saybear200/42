@@ -6,7 +6,7 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 09:11:55 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/07 15:29:38 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/09 20:40:57 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,9 @@ void *ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 
 void	*ft_calloc(size_t nmemb, size_t size);
+
+char *ft_itoa(int n);
+
 
 // typedef struct s_list;
 #endif

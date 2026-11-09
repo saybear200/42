@@ -39,6 +39,5 @@ char *ft_strdup(char *src)
 // {
 // 	(void) argc;
 // 	printf("%s\n", ft_strdup(argv[1]));
-//	printf("%s\n", strdup(argv[1]));
 // 	return(0);
 // }

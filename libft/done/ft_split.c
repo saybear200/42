@@ -6,7 +6,7 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 15:58:22 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/09 13:21:18 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/09 19:29:28 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 		}
 	}
 	p[j] = NULL;
-	return(p);
+	return (p);
 }
 
 // int main(int argc, char **argv)
@@ -75,7 +75,6 @@ char	**ft_split(char const *s, char c)
 // 	char const *string = (char const *)argv[1];
 // 	char character = argv[2][0];
 // 	int i = 0;
-
 // 	while(ft_split(string, character)[i])
 // 	{
 // 		printf("%s\n", ft_split(string, character)[i]);
