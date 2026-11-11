@@ -12,56 +12,58 @@
 
 #include "libft.h"
 
-int	ft_sinal(int n)
+int	ft_len(int n)
 {
-	int	i;
-	int	*s;
-	int	sinal;
+	int len;
 
-	s = &n;
-	sinal = 1;
-	i = 0;
-	if (s[i] == '-' && s[i] == '+')
+	len = (n <= 0);
+	while(n)
 	{
-		if (s[i] == '-')
-			sinal = sinal * -1;
-		else
-			i++;
+		n /= 10;
+		len++;
 	}
-	return (sinal);
+	return(len);
+}
+
+int	ft_nbr(int n)
+{
+	if (n < 0)
+		return (-1);
+	return (1);
 }
 
 char	*ft_itoa(int n)
 {
-	int		sinal;
+	long	nbr;
+	int		len;
+	char	*str;
 	int		i;
-	char	**p;
-	int		*s;
-	int		j;
+	int		sign;
 
-	if (!n)
-		return (0);
-	i = 0;
-	j = 0;
-	sinal = ft_sinal(n);
-	p = malloc((int)ft_strlen((char *)n));
-	if (!p)
+	sign = ft_nbr(n);
+	nbr = (long)n * sign;
+	len = ft_len(n);
+	i = len;
+	str = malloc(len + 1);
+	if (!str)
 		return (NULL);
-	s = &n;
-	while (s[i] == ' ' && s[i] == '	')
-		i++;
-	while (s[i] >= '0' && s[i] <= '9')
+	str[i] = '\0';
+	if (sign == -1)
+		str[0] = '-';
+	if (nbr == 0)
+		str[0] = '0';
+	while (nbr > 0)
 	{
-		p[j] = s[i];
-		j++;
-		i++;
+		i--;
+		str[i] = nbr % 10 + '0';
+		nbr /= 10;
 	}
-	return (sinal * p);
+	return (str);
 }
 
-// int main(int argc, char **argv)
-// {
-// 	(void)argc;
-// 	printf("%s\n", ft_itoa(atoi(argv[1])));
-// 	return(0);
-// }
+int main(int argc, char **argv)
+{
+	(void) argc;
+	printf("%d\n", ft_atoi(ft_itoa((char *)argv[1])));
+	return(0);
+}
