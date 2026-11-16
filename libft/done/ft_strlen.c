@@ -6,18 +6,18 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:39:59 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/07 16:34:12 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/16 09:33:51 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while(s[i])
 		i++;
 	return(i);
 }
@@ -25,7 +25,7 @@ int ft_strlen(char *str)
 // int main(int argc, char **argv)
 // {
 // 	(void) argc;
-// 	printf("%d\n", ft_strlen(argv[1]));
+// 	printf("%zu\n", ft_strlen(argv[1]));
 // 	printf("%ld\n", strlen(argv[1]));
 // 	return(0);
 // }

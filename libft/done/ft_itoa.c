@@ -6,7 +6,7 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 15:58:20 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/09 20:57:40 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/14 08:10:00 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_len(int n)
 {
-	int len;
+	int	len;
 
 	len = (n <= 0);
-	while(n)
+	while (n)
 	{
 		n /= 10;
 		len++;
 	}
-	return(len);
+	return (len);
 }
 
 int	ft_nbr(int n)
@@ -61,13 +61,14 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int main(int argc, char **argv)
-{
-	(void) argc;
-	int n;
-	char *str;
-	n = ft_atoi(argv[1]);
-	str = ft_itoa(n);
-	printf("%s\n", str);
-	return(0);
-}
+// int main(int argc, char **argv)
+// {
+// 	(void) argc;
+// 	int n;
+// 	char *str;
+
+// 	n = ft_atoi(argv[1]);
+// 	str = ft_itoa(n);
+// 	printf("%s\n", str);
+// 	return(0);
+// }

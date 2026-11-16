@@ -6,41 +6,42 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:37:39 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/07 16:35:02 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/16 10:03:05 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(char *str)
+int	ft_sinal(char *str, int *i)
 {
-	int i;
-	int a;
-	int sinal;
+	int	sinal;
+
+	sinal = 1;
+	if (str[*i] == '-')
+		sinal = -sinal;
+	(*i)++;
+	return (sinal);
+}
+
+int	ft_atoi(const char *nptr)
+{
+	int	i;
+	int	a;
+	int	sinal;
 
 	a = 0;
 	i = 0;
-	sinal = 1;
-	while(str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
 	{
 		i++;
 	}
-	while(str[i] == '-' || str[i] == '+')
+	sinal = ft_sinal((char *)nptr, &i);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		if(str[i] == '-')
-		{
-			sinal = sinal * -1;
-			i++;
-		}
-		else
-			i++;
-	}
-	while(str[i] >= '0' && str[i] <= '9')
-	{
-		a = (a * 10) + (str[i] - '0');
+		a = (a * 10) + (nptr[i] - '0');
 		i++;
 	}
-	return(a*sinal);
+	return (a * sinal);
 }
 
 // int main(int argc, char **argv)
