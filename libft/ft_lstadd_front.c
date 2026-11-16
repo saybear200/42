@@ -14,14 +14,25 @@
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	
+	new->next = *lst;
+	*lst = new;
 }
 
 int main(int argc, char **argv)
 {
 	(void)argc;
-	char *str = argv[1];
-	node = ft_lstadd_front(str);
-	printf("%s\n", node)
-	return(0);
+	t_list *head;
+	t_list *new;
+	t_list *tmp;
+	head = ft_lstnew(argv[1]);
+	new = ft_lstnew(argv[2]);
+	ft_lstadd_front(&head, new);
+	while(tmp)
+	{
+		printf("%s\n", (char *)tmp->content);
+		tmp = tmp->next;
+	}
+	if(!new || !head)
+		return(NULL);
+	return(0);	
 }

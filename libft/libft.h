@@ -80,6 +80,11 @@ void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 
 char	*ft_strjoin(char const *s1, char const *s2);
+
+t_list *ft_lstnew(void *content);
+
+void ft_lstadd_front(t_list **lst, t_list *new);
+
 typedef struct s_list
 {
 void *content;
