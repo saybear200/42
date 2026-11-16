@@ -38,6 +38,39 @@ char	**ft_split(char const *s, char c)
 	char	**p;
 	int		words;
 
+	i = 0;
+	j = 0;
+	words = (ft_cwords(s,c));
+	p = malloc(words + 1);
+	if(!p)
+		return(NULL);
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i])
+		{
+			p[j] = malloc(sizeof(char) * (words + 1));
+			if (!p[j])
+				return (NULL);
+			words = 0;
+			while (s[i] != c && s[i])
+				p[j][words++] = s[i++];
+			p[j][words] = '\0';
+			j++;
+		}
+	}
+	p[j] = NULL;
+	return (p);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		i;
+	int		j;
+	char	**p;
+	int		words;
+
 	if(!s)
 		return(NULL);
 	i = 0;
