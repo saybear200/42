@@ -24,12 +24,14 @@ t_list *ft_lstnew(void *content)
 	return(node);
 }
 
-// int main(int argc, char **argv)
-// {
-// 	(void)argc;
-// 	char *str = argv[1];
-// 	t_list *node;
-// 	node = ft_lstnew(str);
-// 	printf("%s\n", (char *)node->content);
-// 	return(0);
-// }
+/*int main(int argc, char **argv)
+{
+ 	(void)argc;
+ 	char *str = argv[1];
+ 	t_list *node;
+	node = ft_lstnew(str);
+	printf("%s\n", (char *)node->content);
+	return(0);
+}
+*/
+
