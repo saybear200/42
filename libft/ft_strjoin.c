@@ -40,6 +40,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		p[s1size + i] = s2[i];
 		i++;
 	}
+	p[s1size + i] = '\0';
 	return (p);
 }
 
