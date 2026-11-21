@@ -6,16 +6,16 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 15:39:57 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/16 08:48:22 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/21 09:15:32 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	nb;
-	char	c;
+	char			c;
 
 	nb = n;
 	if (nb < 0)

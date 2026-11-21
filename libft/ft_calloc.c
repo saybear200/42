@@ -6,7 +6,7 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 13:36:47 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/07 15:28:24 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/21 08:50:41 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (!p)
 		return (NULL);
 	i = 0;
-	while(i < totalspace)
+	while (i < totalspace)
 	{
 		((unsigned char *)p)[i] = 0;
 		i++;

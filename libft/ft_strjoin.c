@@ -6,7 +6,7 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 15:30:50 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/16 10:06:21 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/21 18:00:14 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
+	i = 0;
 	s1size = ft_strlen((char *)s1);
 	s2size = ft_strlen((char *)s2);
 	p = malloc(s1size + s2size + 1);
@@ -39,7 +40,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		p[s1size + i] = s2[i];
 		i++;
 	}
-	p[s1size + s2size] = '\0';
 	return (p);
 }
 

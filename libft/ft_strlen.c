@@ -6,7 +6,7 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:39:59 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/16 09:33:51 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/21 09:22:24 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ size_t	ft_strlen(const char *s)
 	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
-	return(i);
+	return (i);
 }
 
 // int main(int argc, char **argv)

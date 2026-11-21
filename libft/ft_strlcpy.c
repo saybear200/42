@@ -6,36 +6,36 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:39:48 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/07 16:34:16 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/21 13:13:39 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlcpy(char *dest, char *src, int i)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	j;
+	size_t	i;
 
-	j = 0;
-	if(i > 0)
+	i = 0;
+	if (size > 0)
 	{
-		while(j < i - 1 && src[j] != '\0')
+		while (i < size - 1 && src[i] != '\0')
 		{
-			dest[j] = src[j];
-			j++;
+			dst[i] = src[i];
+			i++;
 		}
-		dest[j] = '\0';
+		dst[i] = '\0';
 	}
-	j = 0;
-	while (src[j] != '\0')
-		j++;
-	return(j);
+	i = 0;
+	while (src[i] != '\0')
+		i++;
+	return (i);
 }
 
 // int main(int argc, char **argv)
 // {
 // 	(void) argc;
-// 	printf("%d\n", ft_strlcpy(argv[1], argv[2], atoi(argv[3])));
-// 	printf("%ld\n", strlcpy(argv[1], argv[2], atoi(argv[3])));
+// 	printf("%zu\n", ft_strlcpy(argv[1], argv[2], atoi(argv[3])));
+// 	// printf("%d\n", strlcpy(argv[1], argv[2], atoi(argv[3])));
 // 	return(0);
 // }

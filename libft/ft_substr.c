@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr(estavas aqui).c                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/07 15:30:39 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/09 10:00:04 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/21 15:00:00 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	char *p;
-	size_t slen;
+	size_t	i;
+	char	*p;
+	size_t	slen;
 
-	if(!s)
-		return(NULL);
+	if (!s)
+		return (NULL);
 	slen = ft_strlen((char *)s);
-	if( start >= slen)
-		return(ft_strdup(""));
-	if(len > slen - start)
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
 		len = slen - start;
 	p = malloc(len + 1);
-	if(!p)
-		return(NULL);
+	if (!p)
+		return (NULL);
 	i = 0;
-	while(i < len)
+	while (i < len)
 	{
 		p[i] = s[start + i];
 		i++;
 	}
 	p[i] = '\0';
-	return(p);
+	return (p);
 }
 
 // int main(int argc, char **argv)

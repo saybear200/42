@@ -6,24 +6,23 @@
 /*   By: vcoelho <vcoelho@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 07:39:34 by vcoelho           #+#    #+#             */
-/*   Updated: 2026/11/07 16:34:19 by vcoelho          ###   ########.fr       */
+/*   Updated: 2026/11/21 15:06:50 by vcoelho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(char *s1);
+size_t	ft_strlen(const char *s);
 
-
-int ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
-	int	j;
+	int				i;
+	int				j;
 	unsigned int	dest_len;
 	unsigned int	src_len;
 
 	i = 0;
-	dest_len = ft_strlen(dest);
+	dest_len = ft_strlen(dst);
 	j = dest_len;
 	src_len = ft_strlen(src);
 	if (size == 0)
@@ -33,11 +32,11 @@ int ft_strlcat(char *dest, char *src, size_t size)
 	else
 	{
 		while (src[i] && (dest_len + i) < size)
-			dest[j++] = src[i++];
+			dst[j++] = src[i++];
 		if ((dest_len + i) == size && dest_len < size)
-			dest[--j] = '\0';
+			dst[--j] = '\0';
 		else
-			dest[j] = '\0';
+			dst[j] = '\0';
 		return (src_len + dest_len);
 	}
 }
@@ -45,6 +44,6 @@ int ft_strlcat(char *dest, char *src, size_t size)
 // int main(int argc, char **argv)
 // {
 // 	(void) argc;
-// 	printf("%d\n", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
+// 	printf("%zu\n", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
 // 	return(0);
 // }
