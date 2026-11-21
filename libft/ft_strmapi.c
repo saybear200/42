@@ -14,6 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	if(!s || !f)
+		return (NULL);
 	int		i;
 	char	*p;
 
@@ -24,6 +26,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		p[i] = f(i, p[i]);
 		i++;
 	}
+	if(!p)
+		return(NULL);
 	return (p);
 }
 

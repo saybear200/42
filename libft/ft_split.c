@@ -38,6 +38,8 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		start;
 
+	if(!s)
+		return(NULL);
 	i = 0;
 	j = 0;
 	p = malloc(sizeof(char *) * (ft_cwords(s, c) + 1));

@@ -12,14 +12,16 @@
 
 #include "libft.h"
 
-int	ft_sinal(char *str, int *i)
+int	ft_sinal(char *str)
 {
 	int	sinal;
+	int	j;
 
 	sinal = 1;
-	if (str[*i] == '-')
+	j = 0;
+	if (str[j] == '-')
 		sinal = -sinal;
-	(*i)++;
+	j++;
 	return (sinal);
 }
 
@@ -32,10 +34,13 @@ int	ft_atoi(const char *nptr)
 	a = 0;
 	i = 0;
 	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
-	{
 		i++;
+	sinal = ft_sinal((char *)nptr);
+	if(nptr[i] < 0)
+	{
+		write(1, "-", 1);
+		sinal = -sinal;
 	}
-	sinal = ft_sinal((char *)nptr, &i);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		a = (a * 10) + (nptr[i] - '0');
@@ -44,10 +49,10 @@ int	ft_atoi(const char *nptr)
 	return (a * sinal);
 }
 
-// int main(int argc, char **argv)
-// {
-// 	(void) argc;
-// 	printf("%d\n", ft_atoi(argv[1]));
-// 	printf("%d\n", atoi(argv[1]));
-// 	return(0);
-// }
+/*int main(int argc, char **argv)
+{
+	(void) argc;
+	printf("%d\n", ft_atoi(argv[1]));
+	printf("%d\n", atoi(argv[1]));
+	return(0);
+}*/
