@@ -31,6 +31,14 @@ int	ft_cwords(char const *s, char c)
 	return (words);
 }
 
+static void *ft_free_all(char **p, int j)
+{
+	while(j > 0)
+		free(p[--j]);
+	free(p);
+	return(NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**p;
@@ -53,7 +61,12 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > start)
-			p[j++] = ft_substr(s, start, i - start);
+		{
+			p[j] = ft_substr(s, start, i - start);
+			if(!p[j])
+				return (ft_free_all(p, j));
+			j++;
+		}
 	}
 	p[j] = NULL;
 	return (p);
