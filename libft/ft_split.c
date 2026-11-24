@@ -17,6 +17,8 @@ int	ft_cwords(char const *s, char c)
 	int	words;
 	int	i;
 
+	if (!s)
+		return (0);
 	words = 0;
 	i = 0;
 	while (s[i])
@@ -31,44 +33,44 @@ int	ft_cwords(char const *s, char c)
 	return (words);
 }
 
-static void *ft_free_all(char **p, int j)
+static void	*ft_free_all(char **p, int j)
 {
-	while(j > 0)
-		free(p[--j]);
-	free(p);
-	return(NULL);
+	while (j > 0)
+		free (p[--j]);
+	free (p);
+	return (NULL);
 }
+
+// arr[0] = i;
+// arr[1] = j;
+// arr[2] = start;
 
 char	**ft_split(char const *s, char c)
 {
 	char	**p;
-	int		i;
-	int		j;
-	int		start;
+	int		arr[3];
 
-	if(!s)
-		return(NULL);
-	i = 0;
-	j = 0;
+	arr[0] = 0;
+	arr[1] = 0;
 	p = malloc(sizeof(char *) * (ft_cwords(s, c) + 1));
-	if (!p)
+	if (!p || !s)
 		return (NULL);
-	while (s[i])
+	while (s[arr[0]])
 	{
-		while (s[i] == c)
-			i++;
-		start = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > start)
+		while (s[arr[0]] == c)
+			arr[0]++;
+		arr[2] = arr[0];
+		while (s[arr[0]] && s[arr[0]] != c)
+			arr[0]++;
+		if (arr[0] > arr[2])
 		{
-			p[j] = ft_substr(s, start, i - start);
-			if(!p[j])
-				return (ft_free_all(p, j));
-			j++;
+			p[arr[1]] = ft_substr(s, arr[2], arr[0] - arr[2]);
+			if (!p[arr[1]])
+				return (ft_free_all(p, arr[1]));
+			arr[1]++;
 		}
 	}
-	p[j] = NULL;
+	p[arr[1]] = NULL;
 	return (p);
 }
 
