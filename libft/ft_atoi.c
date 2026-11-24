@@ -12,19 +12,6 @@
 
 #include "libft.h"
 
-/*int	ft_sinal(char *str)
-{
-	int	sinal;
-	int	j;
-
-	sinal = 1;
-	j = 0;
-	if (str[j] == '-')
-		sinal = -sinal;
-	j++;
-	return (sinal);
-}
-*/
 int	ft_atoi(const char *nptr)
 {
 	int	i;
