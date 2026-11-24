@@ -54,7 +54,7 @@ char	**ft_split(char const *s, char c)
 	arr[1] = 0;
 	p = malloc(sizeof(char *) * (ft_cwords(s, c) + 1));
 	if (!p || !s)
-		return (NULL);
+		return (free(p), NULL);
 	while (s[arr[0]])
 	{
 		while (s[arr[0]] == c)
@@ -74,17 +74,21 @@ char	**ft_split(char const *s, char c)
 	return (p);
 }
 
-// int main(int argc, char **argv)
-// {
-// 	(void) argc;
-// 	char const *string = (char const *)argv[1];
-// 	char character = argv[2][0];
-// 	int i = 0;
-// 	while(ft_split(string, character)[i])
-// 	{
-// 		printf("%s\n", ft_split(string, character)[i]);
-// 		i++;
-// 	}
-// 	// printf("%d\n", ft_cwords(string, character));
-// 	return(0);
-// }
+/*int main(int argc, char **argv)
+ {
+ 	(void) argc;
+	(void)argv;
+ 	char const *string = (char const *)argv[1];
+ 	char character = argv[2][0];
+	char *s = NULL;
+	char **res = ft_split(s, ' ');
+ 	int i = 0;
+	while(res[i])
+	{
+		printf("%s\n", res[i]);
+		i++;
+	}
+ 	// printf("%d\n", ft_cwords(string, character));
+ 	return(0);
+ }
+*/
